@@ -10,17 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 //Used to fill memory with a specific value.
 
-void	*ft_memset(void *b, int c, unsigned long len)
+void *ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *ptr = (unsigned char *)b;
+    //converter o ponteiro b para um ponteiro de tipo unsigned char.
+    //Quero converter a memória byte por byte, e um unsigned char tem um tamanho de 1 byte
+    unsigned char *ptr = (unsigned char *)b;
 
-	while (len--)
-	{
-		*ptr++ = (unsigned char)c;
-	}
-	return (b);
+    
+    while (len--)
+    {
+	//Coloca c no endereço de memória apontado por ptr
+        *ptr++ = (unsigned char)c;
+    }
+    //Retorna b, agora apontado para área da memória preenchida.
+    return (b);
 }
 /*
 #include <stdio.h>
