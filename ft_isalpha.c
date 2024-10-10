@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:31:04 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/09/25 16:44:33 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/10 13:35:41 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ int	ft_isalpha(int c)
 		return (0);
 	}
 }
-
-/*
-#include<stdio.h>
-
-int main() {
-    char c = 'A';
-    
-    if (ft_isalpha(c)) {
-        printf("%c it's a letter.\n", c);
-    } else {
-        printf("%c it's not a letter.\n", c);
-    }
-    
-    return 0;
-}
-*/

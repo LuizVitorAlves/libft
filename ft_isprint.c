@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 16:49:12 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/09/25 16:49:29 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/10 13:38:13 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
-
-/*
-#include <stdio.h>
-
-int main() {
-    char c = '7';
-    
-    if (ft_isprint(c)) {
-        printf("%c it's printable.\n", c);
-    } else {
-        printf("%c it's not printable.\n", c);
-    }
-    
-    return 0;
-}
-*/

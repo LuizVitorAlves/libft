@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:57:46 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/09/25 16:46:40 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/10 13:37:32 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ int	ft_isascii(int c)
 		return (0);
 	}
 }
-
-/*
-#include <stdio.h>
-
-int main() {
-    char c = 'A';
-    
-    if (ft_isascii(c)) {
-        printf("%c it's a ascii.\n", c);
-    } else {
-        printf("%c it's not a isascii.\n", c);
-    }
-    
-    return 0;
-}
-*/

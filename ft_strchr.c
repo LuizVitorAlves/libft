@@ -1,42 +1,30 @@
-//Localiza o primeiro caractere dentro de uma string e retorna sua posição
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/10 14:55:17 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/10 15:04:53 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+//Finds the first character within a string and returns its position.
+
+char	*ft_strchr(const char *s, int c)
 {
-    // Anda na string até chegar o final
-    while (*s != '\0')
-    {
-        // vai retornar a posição do caractere na string se encontrado
-        if (*s == (char)c)
-        {
-            return (char *)s;
-        }
-        s++;
-    }
-    // Se o caractere for '\0', retorna a posição para o final da string
-    if (c == '\0')
-    {
-        return (char *)s;
-    }
-    // Se não encontrar o caractere, retorna NULL
-    return NULL;
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+		{
+			return ((char *)s);
+		}
+		s++;
+	}
+	if (c == '\0')
+	{
+		return ((char *)s);
+	}
+	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-    const char *str = "42 Rio";
-    char *result = ft_strchr(str, 'R');
-
-    if (result != NULL)
-    {
-        printf("Character position: %ld\n", result - str);
-    }
-    else
-    {
-        printf("Error!\n");
-    }
-
-    return 0;
-}
-*/

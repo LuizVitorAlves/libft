@@ -1,22 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/10 14:52:31 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/10 14:54:16 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //Transforms an uppercase character into a lowercase character.
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        return (c + 32);
-    }
-    return (c);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    printf("Lowercase of 'A': %c\n", ft_tolower('A'));
-    printf("Lowercase of 'Z': %c\n", ft_tolower('Z'));
-    printf("Lowercase of 'a': %c\n", ft_tolower('a')); // Teste para uma letra minúscula
-    printf("Non-letter character: %c\n", ft_tolower('1')); // Teste para um caractere não-letra
-
-    return (0);
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (c + 32);
+	}
+	return (c);
 }

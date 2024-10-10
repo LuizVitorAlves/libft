@@ -1,18 +1,24 @@
-//Preencher uma área da memória com zeros
-//Recebo um ponteiro s para dizer onde vai começar a ser zerado
-//Recebo um n para dizer quantos bites vãos er zerados
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/10 13:58:02 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/10 14:01:30 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stddef.h>
+//Used to fill a memory area with zeros.
 
-void ft_bzero(void *s, size_t n) {
-    //Conversaão para unsigned char do ponteiro s
-    //Para garantir que estamos trabalhando com 1 byte (menor tamanho de unidade de memória)
-    //Para podermos manipular a memória byte a byte
-    unsigned char *ptr = (unsigned char *)s;
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
 
-    //Caso n seja maior do que 0, irá descer um numero.
-    while (n-- > 0) {
-        //Atribui o valor zero ao endereço de memória apontado.
-        *ptr++ = 0;
-    }
+	*ptr = (unsigned char *)s;
+	while (n-- > 0)
+	{
+		*ptr++ = 0;
+	}
 }
