@@ -1,11 +1,22 @@
-//Bonus
-#include <stdlib.h> // Necessário para usar free
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 18:05:48 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 18:09:10 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (lst && del) // Verifica se os ponteiros fornecidos são válidos.
-    {
-        del(lst->content); // Aplica a função del ao conteúdo do nó.
-        free(lst);         // Libera a memória do nó.
-    }
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

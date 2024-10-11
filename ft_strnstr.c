@@ -1,26 +1,35 @@
-//Procura a primeira apairição de uma substring dentro de uma string, dentro de um numero limitado de caracteres
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 14:30:03 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 18:41:58 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-char *ft_strnstr(const char *str, const char *search, size_t len)
+// Searches for the first occurrence of a substring within a string,
+// within a limited number of characters.
+
+char	*ft_strnstr(const char *str, const char *search, size_t len)
 {
-    size_t search_len = 0;
+	size_t	search_len;
 
-    // Se search é uma string vazia, retorna str
-    if (!*search)
-        return (char *)str;
-    // Calcula o comprimento de search
-    while (search[search_len])
-        search_len++;
-    // Loop para procurar search dentro de str
-    while (len >= search_len && *str)
-    {
-        // Verifica se a parte atual de str corresponde a search
-        if (!ft_strncmp(str, search, search_len))
-            return (char *)str;
-        str++;
-        len--;
-    }
-    // Se não encontramos search, retorna NULL
-    return NULL;
+	search_len = 0;
+	if (!*search)
+		return ((char *)str);
+	while (search[search_len])
+		search_len++;
+	while (len >= search_len && *str)
+	{
+		if (!ft_strncmp(str, search, search_len))
+			return ((char *)str);
+		str++;
+		len--;
+	}
+	return (NULL);
 }

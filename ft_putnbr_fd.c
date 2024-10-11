@@ -1,26 +1,30 @@
-#include <unistd.h> // Para write
-#include "libft.h" // Para a definição de ft_putnbr_fd
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 16:45:03 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 16:51:49 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/**
- * ft_putnbr_fd - Escreve o inteiro 'n' no descritor de arquivo 'fd'
- * @n: O inteiro a ser escrito.
- * @fd: O descritor de arquivo onde escrever.
- *
- * Retorna: None.
- */
+#include "libft.h"
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648) // O menor valor inteiro
+	if (n == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", fd); // Lida com o menor número inteiro
-		return;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	if (n < 0) // Lida com números negativos
+	if (n < 0)
 	{
-		ft_putchar_fd('-', fd); // Escreve o sinal negativo
-		n = -n; // Torna 'n' positivo
+		ft_putchar_fd('-', fd);
+		n = -n;
 	}
-	if (n >= 10) // Se o número for maior ou igual a 10
-		ft_putnbr_fd(n / 10, fd); // Chama recursivamente para dividir o número
-	ft_putchar_fd((n % 10) + '0', fd); // Escreve o dígito final
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd((n % 10) + '0', fd);
 }

@@ -2,14 +2,14 @@
 #define LIBFT_H
 
 #include <stdlib.h>
-#include <stdlib.h>
+#include <unistd.h>
 #include <stddef.h> 
 
 // Estrutura para a lista encadeada
 typedef struct s_list
 {
-    void *content;         // Conteúdo do nó
-    struct s_list *next;   // Ponteiro para o próximo nó
+    void *content;
+    struct s_list *next;
 } t_list;
 
 // Funções da parte obrigatória
@@ -46,6 +46,7 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 // Funções da parte bônus
 t_list *ft_lstnew(void *content);

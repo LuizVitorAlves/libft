@@ -1,11 +1,20 @@
-//Bonus
-void ft_lstadd_front(t_list **lst, t_list *new)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 17:41:04 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 17:45:24 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (lst && new) // Verifica se os ponteiros fornecidos são válidos.
-    {
-        // Faz o novo nó apontar para o início atual da lista.
-        new->next = *lst;
-        // Atualiza o ponteiro de início da lista para o novo nó.
-        *lst = new;
-    }
+	if (lst && new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

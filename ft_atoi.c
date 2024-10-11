@@ -1,28 +1,37 @@
-//Converte uma string em numero inteiro
-//Passo 1: Ignorar espaçoes e branco no inicio
-//Passo 2: Verificar se é positivo oou negativo
-//Passo 3: Converter a string em numero
-//Passo 4: Retorna o resultado com o sinal
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 14:46:41 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 14:52:40 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int atoi(const char *str)
+int	atoi(const char *str)
 {
-    int sign = 1;
-    long result = 0;
-    int i = 0;
+	int		sign;
+	long	result;
+	int		i;
 
-    while (str[i] == ' ')
-        i++;
-    if (str[i] == '-')
-    {
-        sign = -1;
-        i++;
-    }
-    else if (str[i] == '+')
-        i++;
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        result = result * 10 + (str[i] - '0');
-        i++;
-    }
-    return sign * result;
+	i = 0;
+	result = 0;
+	sign = 0;
+	while (str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (sign * result);
 }

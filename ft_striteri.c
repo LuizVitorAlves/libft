@@ -1,25 +1,27 @@
-#include "libft.h" // Para a definição de ft_striteri
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 16:15:00 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 16:25:27 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/**
- * ft_striteri - Aplica uma função a cada caractere da string 's' com seu índice
- * @s: A string na qual iterar.
- * @f: A função a aplicar a cada caractere.
- *
- * Retorna: None.
- */
+#include "libft.h"
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
-	// Verifica se a string ou a função são nulas
 	if (!s || !f)
-		return;
-	
+		return ;
 	i = 0;
-	// Aplica a função 'f' a cada caractere da string
 	while (s[i])
 	{
-		f(i, &s[i]); // Chama a função passando o índice e um ponteiro para o caractere
+		f(i, &s[i]);
 		i++;
 	}
 }

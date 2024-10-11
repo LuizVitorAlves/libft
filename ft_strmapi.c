@@ -1,34 +1,33 @@
-#include <stdlib.h> // Para malloc e NULL
-#include "libft.h" // Para ft_strlen
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 16:05:47 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 16:13:13 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/**
- * ft_strmapi - Aplica uma função a cada caractere da string 's'
- * @s: A string na qual iterar.
- * @f: A função a aplicar a cada caractere.
- *
- * Retorna a nova string criada a partir das aplicações sucessivas de 'f', ou NULL se a alocação falhar.
- */
+#include "libft.h"
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*new_str;
 	size_t	i;
 
-	// Verifica se a string ou a função são nulas
 	if (!s || !f)
 		return (NULL);
-	
-	// Aloca memória para a nova string
 	new_str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!new_str)
 		return (NULL);
-	
 	i = 0;
-	// Aplica a função 'f' a cada caractere da string
 	while (s[i])
 	{
-		new_str[i] = f(i, s[i]); // Chama a função passando o índice e o caractere
+		new_str[i] = f(i, s[i]);
 		i++;
 	}
-	new_str[i] = '\0'; // Adiciona o caractere nulo no final
+	new_str[i] = '\0';
 	return (new_str);
 }

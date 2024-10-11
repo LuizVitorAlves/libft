@@ -1,11 +1,20 @@
-t_list *ft_lstlast(t_list *lst)
-{
-    if (!lst) // Se a lista estiver vazia, retorna NULL.
-        return (NULL);
-    
-    // Percorre a lista até encontrar o último nó (onde next é NULL).
-    while (lst->next)
-        lst = lst->next;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 17:53:25 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 17:56:35 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    return (lst); // Retorna o último nó.
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

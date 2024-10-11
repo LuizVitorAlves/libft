@@ -1,19 +1,27 @@
-//Localiza a primeira aparição de um caractere especifico dentro de uma área da memoria
-//Criar um ponteiro que aponte para o mesmo lugar do que s (unsigned char para percorrer byte a byte)
-//Criar um looping que vai decrementar n até chegar a zero
-//Verifica se o byte apontado é equivalente ao caractere
-//Se encontrado retorna a posição da memória
-//Caso não encontre retorna NULL
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 14:20:59 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 18:40:53 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memchr(const void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    const unsigned char *ptr = (const unsigned char *)s;
+	const unsigned char	*ptr;
 
-    while (n--)
-    {
-        if (*ptr == (unsigned char)c)
-            return (void *)ptr;
-        ptr++;
-    }
-    return NULL;
+	ptr = (const unsigned char *)s;
+	while (n--)
+	{
+		if (*ptr == (unsigned char)c)
+			return ((void *)ptr);
+		ptr++;
+	}
+	return (NULL);
 }

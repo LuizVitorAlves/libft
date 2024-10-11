@@ -1,26 +1,38 @@
-//Copia uma string para um buffer, respeitando o tamanho passado no parametro
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 14:55:37 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 18:36:33 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-size_t ft_strlcpy(char *dest, const char *src, size_t destsize)
+//Copies a string to a buffer, respecting the size passed in the parameter.
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
-    size_t i = 0;
-    size_t src_len = 0;
+	size_t	i;
+	size_t	src_len;
 
-    // Calcula o comprimento de src
-    while (src[src_len] != '\0')
-    {
-        src_len++;
-    }
-    // Se destsize for maior que 0, realiza a cópia de src para dest
-    if (destsize > 0)
-    {
-        while (src[i] != '\0' && i < (destsize - 1))
-        {
-            dest[i] = src[i];
-            i++;
-        }
-        dest[i] = '\0'; // Garante que a string de destino seja terminada em '\0'
-    }
-    return src_len; // Retorna o comprimento de src
+	i = 0;
+	src_len = 0;
+	while (src[src_len] != '\0')
+	{
+		src_len++;
+	}
+	if (destsize > 0)
+	{
+		while (src[i] != '\0' && i < (destsize - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (src_len);
 }

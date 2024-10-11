@@ -1,10 +1,16 @@
-//Copia uma string para um espaço alocado na memória
-//Passo 1: Saber qual o tamanho da string que vai ser alocada
-//Passo 2: Alocar a memoria da string (lembrando de incluir o '\0'
-//Passo 3: Copiar a string e adicionar o '\0'
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 15:26:41 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 18:48:37 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -14,7 +20,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	while (s[i])
 		i++;
-	copy = (char *)malloc((i + 1) * sizeof(char));
+	newstr = (char *)malloc((i + 1) * sizeof(char));
 	if (!newstr)
 		return (NULL);
 	i = 0;

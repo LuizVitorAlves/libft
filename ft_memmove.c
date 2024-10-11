@@ -6,9 +6,11 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:37:06 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/10 14:46:38 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:35:37 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 //Copies a memory area from one location to another.
 

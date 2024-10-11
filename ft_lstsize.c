@@ -1,15 +1,24 @@
-//Bonus
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/11 17:46:51 by lalves-d          #+#    #+#             */
+/*   Updated: 2024/10/11 17:51:49 by lalves-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    int count = 0;
+	int	count;
 
-    // Percorre a lista contando cada nó.
-    while (lst)
-    {
-        count++;
-        lst = lst->next; // Avança para o próximo nó.
-    }
-
-    return (count); // Retorna o número total de nós.
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
