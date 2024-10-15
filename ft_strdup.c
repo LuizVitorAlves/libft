@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:26:41 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:48:37 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:24:55 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,14 @@ char	*ft_strdup(const char *s)
 	newstr[i] = '\0';
 	return (newstr);
 }
+
+/*
+int main()
+{
+	char *s = "Hello World";
+    char *copy = strdup(s);
+    printf("string : %s\n", s);
+    printf("copied string : %s\n", copy);
+    free(copy);
+    return (0);
+}*/

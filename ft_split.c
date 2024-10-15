@@ -6,11 +6,29 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:52:48 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 17:07:03 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:23:26 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*strncpy(char *dest, const char *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
 
 static int	count_words(char const *s, char c)
 {
@@ -76,3 +94,18 @@ char	**ft_split(char const *s, char c)
 	split[i] = NULL;
 	return (split);
 }
+
+/*
+int main()
+{
+	char *str = "k,Hello,k";
+    char **tab;
+
+    tab = ft_split(str, ',');
+    for (int i = 0; tab[i]!= NULL; i++)
+        printf("%s\n", tab[i]);
+    for (int i = 0; tab[i]!= NULL; i++)
+        free(tab[i]);
+    free(tab);
+    return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 14:36:27 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:41:25 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:19:40 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+int main()
+{
+	char *str1 = "Hellu";
+    char *str2 = "Hello";
+
+    printf("using memcmp: %i\n", memcmp(str1, str2, 6));
+    printf("using ft_memcmp: %zu\n", ft_memcmp(str1, str2, 6));
+    return (0);
+}*/

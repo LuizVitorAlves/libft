@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:00:22 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:31:34 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:20:18 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+int main()
+{
+	char greeting1[5];
+	char greeting2[5];
+
+	memcpy(greeting1, "Hello, world!\n", 3);
+	ft_memcpy(greeting2, "Hello, world!\n", 3);
+	printf("%s\n",greeting1);
+	printf("%s\n",greeting2);
+}
+*/

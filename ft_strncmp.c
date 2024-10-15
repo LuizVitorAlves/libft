@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 14:06:04 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:40:11 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:27:43 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+int	main()
+{
+	char *str1 = "ABC";
+	char *str2 = "tBC";
+
+	printf("using strncmp: %i\n", strncmp("str1", str2,0));
+	printf("using ft_strncmp: %i\n", ft_strncmp(str1, str2,0));
+}*/

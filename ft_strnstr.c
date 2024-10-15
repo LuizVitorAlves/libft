@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 14:30:03 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:41:58 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:28:10 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,15 @@ char	*ft_strnstr(const char *str, const char *search, size_t len)
 	}
 	return (NULL);
 }
+
+/*
+int main()
+{
+    char *big = "aeiou";
+    char *find = "o";
+
+    printf(" testing with strnstr: %s\n", strnstr(big,find,2));
+    printf(" testing with ft_strnstr: %s\n", ft_strnstr(big,find,2));
+
+    return 0;
+}*/

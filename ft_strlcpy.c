@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 14:55:37 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:36:33 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:26:29 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	}
 	return (src_len);
 }
+
+/*
+int main(void)
+{
+    const char *src = "Vasco da Gama";
+    char dst[20];
+
+    printf("using strlcpy: %li\n", strlcpy(dst,src,2));
+    printf("using ft_strlcpy: %i\n", ft_strlcpy(dst,src,2));
+    return (0);
+}*/

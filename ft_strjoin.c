@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:43:32 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 15:50:44 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:25:29 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[j] = '\0';
 	return (new_str);
 }
+
+/*
+int main()
+{
+	char *str1 = "Hello";
+    char *str2 = "World";
+    char *result;
+
+    result = ft_strjoin(str1, str2);
+    printf("Resultant string: %s\n", result);
+    free(result);
+    return (0);
+}
+*/

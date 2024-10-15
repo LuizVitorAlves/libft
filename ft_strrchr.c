@@ -6,7 +6,7 @@
 /*   By: lalves-d <lalves-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:49:10 by lalves-d          #+#    #+#             */
-/*   Updated: 2024/10/11 18:39:28 by lalves-d         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:28:41 by lalves-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,11 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+/*
+int main(void)
+{
+    printf("using strrchr: %s\n", strrchr("I am optimus prime", 'm'));
+    printf("using ft_strrchr: %s\n", ft_strrchr("I am optimus prime", 'm'));
+
+}*/
